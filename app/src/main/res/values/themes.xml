@@ -25,4 +25,10 @@
         <item name="android:textSize">@dimen/defaultTextSize</item>
         <item name="android:fontFamily">@font/my_font</item>
     </style>
+
+
+    <style name="bottom_nav_style" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/my_font</item>
+    </style>
 </resources>

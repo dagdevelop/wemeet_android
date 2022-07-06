@@ -23,7 +23,7 @@
     <string name="organiser_txt">Organisers</string>
     <string name="availability_page_title">Availability</string>
     <string name="new_event">New event</string>
-    <string name="search_event">find event</string>
+    <string name="search_event">Find event</string>
     <string name="all_event">All event</string>
     <string name="account">account</string>
 </resources>

@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitConfig {
 
-    val BASE_URL = "http://localhost:3001/"
+    val BASE_URL = "http://10.0.2.2:3001/"
 
     // le by lazy veut dire : on initialise la variable retrofit seulement si on l'appelle ou si on l'utilise
     private val retrofit by lazy {

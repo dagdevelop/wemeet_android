@@ -36,8 +36,8 @@
     <string name="organiser_txt">Organisateurs</string>
 
     <string name="availability_page_title">Disponibilité</string>
-    <string name="search_event">Rechercher évènement</string>
-    <string name="new_event">Nouvel évènement</string>
+    <string name="search_event">Rechercher</string>
+    <string name="new_event">Ajouter</string>
     <string name="account">Compte</string>
-    <string name="all_event">Tous les évènements</string>
+    <string name="all_event">Liste</string>
 </resources>
