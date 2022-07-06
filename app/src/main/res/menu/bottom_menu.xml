@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_search"
+        android:title="@string/search_event"
+        android:id="@+id/search_event"/>
+
+    <item android:icon="@drawable/ic_plus"
+        android:title="@string/new_event"
+        android:id="@+id/add_event"/>
+
+    <item android:icon="@drawable/ic_event"
+        android:title="@string/all_event"
+        android:id="@+id/all_event"/>
+
+    <item android:icon="@drawable/ic_user"
+        android:title="@string/account"
+        android:id="@+id/user_icon"/>
+
+</menu>

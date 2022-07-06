@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">WeMeet</string>
+
+    <!-- page connexion -->
+    <string name="email_txt">Adresse E-mail</string>
+    <string name="mdp_txt">Mot de passe</string>
+    <string name="connect_btn_txt">Connexion</string>
+    <string name="inscription_btn_txt">Créer un compte</string>
+    <string name="email_input">\@string/email_txt</string>
+    <string name="mdp_input">\@string/mdp_txt</string>
+
+    <!-- page info -->
+    <string name="info_page_title">Informations personnelles</string>
+    <string name="save_btn">Enregistrer</string>
+    <string name="info_page_update_btn">Modifier</string>
+
+    <!-- page search event -->
+    <string name="search_event_page_title">Evènements</string>
+    <string name="search_bar_key">Ville</string>
+
+    <!-- page add event -->
+    <string name="private_txt">Privé</string>
+    <string name="public_txt" translatable="false">Public</string>
+    <string name="new_event_page_title">Nouvel évènement</string>
+    <string name="new_event_title_input">Titre*</string>
+    <string name="new_event_description_input" translatable="false">Description</string>
+    <string name="new_event_city_input">Ville*</string>
+    <string name="new_event_indicator_txt">* champ obligatoire</string>
+
+    <!-- page event details -->
+    <string name="event_details_page_locality">Localité</string>
+    <string name="event_details_participants" translatable="false">Participants</string>
+    <string name="proposed_date_txt">Dates proposées</string>
+    <string name="event_details_survey">Sodages</string>
+
+    <string name="organiser_txt">Organisateurs</string>
+
+    <string name="availability_page_title">Disponibilité</string>
+    <string name="search_event">Rechercher évènement</string>
+    <string name="new_event">Nouvel évènement</string>
+    <string name="account">Compte</string>
+    <string name="all_event">Tous les évènements</string>
+</resources>
