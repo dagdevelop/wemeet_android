@@ -1,8 +1,8 @@
-package com.dagdevelop.wemeet.dataAccess.models
+package com.dagdevelop.wemeet.dataAccess.dto
 
 import com.google.gson.annotations.SerializedName
 
-data class SurveyLine(@SerializedName("survey") val survey : Int,
+data class SurveyLine(val survey : Int,
                       @SerializedName("line_number") val lineNumber : Int,
-                      @SerializedName("label") val label : String,
+                      val label : String,
                       @SerializedName("nb_votes") val nbVotes : Int)
