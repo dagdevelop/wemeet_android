@@ -1,9 +1,11 @@
 package com.dagdevelop.wemeet.dataAccess.dto
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
-data class Event (val id : Int,
-                  val label : String,
-                  val description : String?,
-                  @SerializedName("city_name") val cityName : String,
-                  @SerializedName("is_private") val isPrivate : Boolean)
+data class Event(
+    val id: Int,
+    val label: String,
+    val description: String?,
+    @Json(name = "city_name") val cityName: String,
+    @Json(name = "is_private") val isPrivate: Boolean
+)

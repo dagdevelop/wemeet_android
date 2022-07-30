@@ -17,7 +17,7 @@
     <string name="new_event_title_input">Title*</string>
     <string name="new_event_city_input">City*</string>
     <string name="new_event_indicator_txt">* mandatory field</string>
-    <string name="event_details_page_locality">Locality</string>
+    <string name="event_details_locality">Locality : %s</string>
     <string name="proposed_date_txt">Proposed dates</string>
     <string name="event_details_survey">Survey</string>
     <string name="organiser_txt">Organisers</string>
@@ -26,4 +26,9 @@
     <string name="search_event">find event</string>
     <string name="all_event">All event</string>
     <string name="account">account</string>
+
+    <string name="bottom_menu_all_events">All events</string>
+    <string name="bottom_menu_search">Search event</string>
+    <string name="bottom_menu_user_account">Your user account</string>
+    <string name="bottom_menu_add_event">Add an event</string>
 </resources>

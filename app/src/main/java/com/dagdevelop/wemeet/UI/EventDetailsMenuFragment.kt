@@ -34,7 +34,7 @@ class EventDetailsMenuFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         println("|-------------> on passe par onCreateView de EventDetailsMenu Fragment")
-        return inflater.inflate(R.layout.fragment_event_details_menu, container, false)
+        return inflater.inflate(R.layout.fragment_event_details_top, container, false)
     }
 
     companion object {

@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">WeMeet</string>
+    <!--
+    NOTE : Strings written in CAPITAL LETTERS are to be automatically replaced with other values
+    -->
 
     <!-- page connexion -->
     <string name="email_txt">Adresse E-mail</string>
@@ -28,11 +31,13 @@
     <string name="new_event_indicator_txt">* champ obligatoire</string>
 
     <!-- page event details -->
-    <string name="event_details_page_locality">Localité</string>
+    <string translatable="false" name="event_detail_title" >EVENT TITLE</string>
+    <string translatable="false" name="event_detail_description" >EVENT DESCRIPTION</string>
+
+    <string name="event_details_locality">Localité : %s</string>
     <string name="event_details_participants" translatable="false">Participants</string>
     <string name="proposed_date_txt">Dates proposées</string>
     <string name="event_details_survey">Sondages</string>
-
     <string name="organiser_txt">Organisateur</string>
 
     <string name="availability_page_title">Disponibilité</string>
@@ -40,6 +45,13 @@
     <string name="new_event">Nouvel évènement</string>
     <string name="account">Compte</string>
     <string name="all_event">Tous les évènements</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--- BOTTOM MENU -->
+    <string name="bottom_menu_all_events">Tous les évènements</string>
+    <string name="bottom_menu_search">Rechercher évènement</string>
+    <string name="bottom_menu_user_account">Votre compte utilisateur</string>
+    <string name="bottom_menu_add_event">Ajouter un évènement</string>
+
+
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 </resources>

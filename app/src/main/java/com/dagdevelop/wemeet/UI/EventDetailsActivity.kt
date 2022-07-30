@@ -14,9 +14,6 @@ class EventDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val menu = EventDetailsMenuFragment.newInstance("MON EVENT", false)
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.add(R.id.fragment_event_details_menu, menu, "fragment menu")
-        transaction.commit()
 
         binding = ActivityEventDetailsBinding.inflate(layoutInflater)
 

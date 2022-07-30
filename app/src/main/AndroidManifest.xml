@@ -24,7 +24,7 @@
             android:required="false" />
 
         <activity
-            android:name=".UI.MainActivity"
+            android:name=".dataAccess.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

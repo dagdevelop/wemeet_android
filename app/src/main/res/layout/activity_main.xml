@@ -5,19 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/defaultStyle"
-    tools:context=".UI.MainActivity">
-
-    <TextView
-        style="@style/inputStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="@string/event_details_page_locality"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    tools:context=".dataAccess.MainActivity">
     <!-- DISPLAY USER -->
 
     <TextView
@@ -36,10 +24,17 @@
         android:id="@+id/eventDetailsActivityButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="TO_EVENT_ACTIVITY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="@+id/singleUserView"
+        app:layout_constraintVertical_bias="0.434" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout="@layout/fragment_bottom_menu_layout"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
