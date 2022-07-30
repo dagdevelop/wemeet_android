@@ -21,14 +21,15 @@
     <string name="search_event_page_title">Evènements</string>
     <string name="search_bar_key">Ville</string>
 
-    <!-- page add event -->
+    <!-- page new event -->
     <string name="private_txt">Privé</string>
     <string name="public_txt" translatable="false">Public</string>
-    <string name="new_event_page_title">Nouvel évènement</string>
+    <string name="new_event_page_title">Créer un nouvel évènement</string>
     <string name="new_event_title_input">Titre*</string>
     <string name="new_event_description_input" translatable="false">Description</string>
     <string name="new_event_city_input">Ville*</string>
     <string name="new_event_indicator_txt">* champ obligatoire</string>
+    <string name="new_event_submit_txt">Sauvegarder</string>
 
     <!-- page event details -->
     <string translatable="false" name="event_detail_title" >EVENT TITLE</string>

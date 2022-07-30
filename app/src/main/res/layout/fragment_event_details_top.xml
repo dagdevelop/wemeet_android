@@ -5,7 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.EventDetailsMenuFragment">
+    tools:context=".UI.EventDetailsMenuFragment"
+    android:background="@color/default_color">
 
     <TextView
         android:id="@+id/event_details_menu_title"
@@ -21,13 +22,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/event_details_menu_isPrivate"
+        android:id="@+id/event_details_menu_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/event_detail_description"
         android:gravity="center"
         android:textAlignment="center"
         android:minHeight="100dp"
+        android:background="@color/white"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
         app:layout_constraintTop_toBottomOf="@+id/event_details_menu_title" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        app:layout_constraintTop_toBottomOf="@id/event_details_menu_description"
+        android:maxHeight="3dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
