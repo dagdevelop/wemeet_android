@@ -14,25 +14,6 @@ import java.lang.Exception
 const val TAG_VM = "UserViewModel"
 
 class UserViewModel : ViewModel() {
-    /*
-    private val _firstName = MutableLiveData<String>()
-    val firstName: LiveData<String> = _firstName
-
-    private val _lastName = MutableLiveData<String>()
-    val lastName: LiveData<String> = _lastName
-
-    private val _email = MutableLiveData<String>()
-    val email: LiveData<String> = _email
-
-    private val _address = MutableLiveData<String?>()
-    val address: LiveData<String?> = _address
-
-    private val _postalCode = MutableLiveData<Int?>()
-    val postalCode: LiveData<Int?> = _postalCode
-
-    private val _isAdmin = MutableLiveData<Boolean>()
-    val isAdmin: LiveData<Boolean> = _isAdmin
-     */
 
     private val _user = MutableLiveData<User>()
     val user: LiveData<User> = _user

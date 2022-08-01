@@ -25,10 +25,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, EventDetailsActivity::class.java))
         }
     }
-
-    private fun getUser(id : Int) {
-
-    }
-
-
 }
