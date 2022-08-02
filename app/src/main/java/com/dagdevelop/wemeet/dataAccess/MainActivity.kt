@@ -3,24 +3,39 @@ package com.dagdevelop.wemeet.dataAccess
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.dagdevelop.wemeet.R
 import com.dagdevelop.wemeet.UI.EventDetailsActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import com.dagdevelop.wemeet.dataAccess.configuration.ApiConfig
-import com.dagdevelop.wemeet.dataAccess.dto.User
+import com.dagdevelop.wemeet.dataAccess.middleware.ApiConfig
 import com.dagdevelop.wemeet.dataAccess.webService.UserApi
-import com.dagdevelop.wemeet.dataAccess.webService.UserApiService
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.dagdevelop.wemeet.databinding.ActivityMainBinding
+import kotlinx.coroutines.*
+import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
     private val retrofit = ApiConfig
+
+    // nécessaire pour pouvoir cibler manuellement les éléments de activity_main.xml
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
+        // Pour pouvoir cibler "manuellement" les éléments de activity_main.xml
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Requête API = async (mot-clé Kotlin = suspend)
+        // Doit être dans un bloc de coroutine (= await)
+        try {
+            runBlocking {
+                val user = UserApi.service.getUser(1).body()
+                binding.singleUserView.text = "${ user?.firstName } ${user?.lastName}"
+            }
+        } catch (e: Exception) {
+            binding.singleUserView.text = e.message
+        }
+
+        // pour passer à l'activité EventDetails en attendant
         eventDetailsActivityButton.setOnClickListener {
             startActivity(Intent(this, EventDetailsActivity::class.java))
         }

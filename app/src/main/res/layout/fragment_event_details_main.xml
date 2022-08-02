@@ -33,7 +33,7 @@
             android:layout_columnWeight="3.5"
             android:layout_marginTop="7dp"
             android:layout_marginBottom="18dp"
-            android:text="@{@string/event_details_locality(eventViewModel.locality)}" />
+            android:text="@{@string/event_details_locality(eventViewModel.event.cityName)}" />
         <!--
             tools:text="@{@string/event_details_locality(eventViewModel.locality)}" -->
 

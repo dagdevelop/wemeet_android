@@ -1,4 +1,4 @@
-package com.dagdevelop.wemeet.dataAccess.configuration
+package com.dagdevelop.wemeet.dataAccess.middleware
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -10,7 +10,8 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 object ApiConfig {
 
-    val BASE_URL = "http://192.168.0.19:3001" //"http://localhost:3001/"
+    // terminal > ipconfig/all > chercher IPv4 (192.168.0.XXXX:3001)
+    val BASE_URL = "http://192.168.0.13:3001" //"http://localhost:3001/"
 
     /**
      * Build the Moshi object with Kotlin adapter factory that Retrofit will be using.
