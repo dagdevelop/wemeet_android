@@ -28,6 +28,12 @@ object ApiConfig {
         .baseUrl(BASE_URL)
         .build()
 
+    // Interceptor : permet opérations sur requêtes
+    val okHttpClient = OkHttpClient()
+        .newBuilder()
+        .addInterceptor(RequestInteceptor)
+        .build()
+
     // va permettre des opérations sur les requêtes
     object RequestInteceptor : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
@@ -36,11 +42,6 @@ object ApiConfig {
             return chain.proceed(request)
         }
     }
-
-    val okHttpClient = OkHttpClient()
-        .newBuilder()
-        .addInterceptor(RequestInteceptor)
-        .build()
 
     // Expose the client to be used elsewhere (API service layer)
     fun getClient(): Retrofit = retrofit

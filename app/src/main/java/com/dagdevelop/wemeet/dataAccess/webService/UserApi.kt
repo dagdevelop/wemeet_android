@@ -2,6 +2,9 @@ package com.dagdevelop.wemeet.dataAccess.webService
 
 import com.dagdevelop.wemeet.dataAccess.middleware.ApiConfig
 import com.dagdevelop.wemeet.dataAccess.dto.User
+import com.dagdevelop.wemeet.dataAccess.middleware.LoginRequest
+import com.dagdevelop.wemeet.dataAccess.middleware.LoginResponse
+import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -11,7 +14,7 @@ interface UserApiService {
     suspend fun getUser(@Path("id") id : Int) : Response<User> // Call = valeur retournée par la requête Retrofit
 
     @POST("${USER}/login")
-    suspend fun login(@Header("Authorization") token: String) : okhttp3.Response
+    fun login(@Body request: LoginRequest) : Call<LoginResponse>
 
     @POST(USER)
     suspend fun createUser() : okhttp3.Response
