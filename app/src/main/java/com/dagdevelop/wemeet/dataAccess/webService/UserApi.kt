@@ -14,7 +14,7 @@ interface UserApiService {
     suspend fun getUser(@Path("id") id : Int) : Response<User> // Call = valeur retournée par la requête Retrofit
 
     @POST("${USER}/login")
-    fun login(@Body request: LoginRequest) : Call<LoginResponse>
+    suspend fun login(@Body request: LoginRequest) : Response<LoginResponse>
 
     @POST(USER)
     suspend fun createUser() : okhttp3.Response

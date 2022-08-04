@@ -9,6 +9,7 @@
     <string name="mdp_txt">Mot de passe</string>
     <string name="connect_btn_txt">Connexion</string>
     <string name="inscription_btn_txt">Créer un compte</string>
+    <string name="register_txt">Pas encore inscrit ?</string>
     <string name="email_input">\@string/email_txt</string>
     <string name="mdp_input">\@string/mdp_txt</string>
 

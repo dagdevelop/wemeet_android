@@ -5,6 +5,7 @@
     <string name="mdp_txt">Password</string>
     <string name="connect_btn_txt">Login</string>
     <string name="inscription_btn_txt">Create account</string>
+    <string name="register_txt">Not registered yet ?</string>
     <string name="email_input">\@string/email_txt</string>
     <string name="mdp_input">\@string/mdp_txt</string>
     <string name="info_page_title">Personnal informations</string>

@@ -38,7 +38,7 @@ object ApiConfig {
     object RequestInteceptor : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
             val request = chain.request()
-            println("Outgoing request to ${request.url()}")
+            println("Outgoing request to ${request.url}")
             return chain.proceed(request)
         }
     }

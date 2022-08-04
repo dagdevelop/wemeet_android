@@ -6,20 +6,22 @@
     android:layout_height="match_parent"
     style="@style/defaultStyle"
     tools:context=".dataAccess.MainActivity">
-    <!-- DISPLAY USER -->
 
+    <!-- DISPLAY USER -->
     <TextView
         android:id="@+id/singleUserView"
+        android:layout_width="113dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="148dp"
         android:text="USER AFFICHE ICI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163" />
 
-    <!-- DISPLAY USER -->
-
+    <!-- LIENS TEMPORAIRES VERS ACTIVITÉS -->
     <Button
         android:id="@+id/eventDetailsActivityButton"
         android:layout_width="wrap_content"
@@ -29,12 +31,25 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/singleUserView"
-        app:layout_constraintVertical_bias="0.434" />
+        app:layout_constraintVertical_bias="0.357" />
+
+    <Button
+        android:id="@+id/loginActivityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TO_LOGIN_ACTIVITY"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/eventDetailsActivityButton"
+        app:layout_constraintVertical_bias="0.155" />
 
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout="@layout/fragment_bottom_menu_layout"/>
+        tools:layout="@layout/fragment_bottom_menu_layout"
+        tools:layout_editor_absoluteX="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

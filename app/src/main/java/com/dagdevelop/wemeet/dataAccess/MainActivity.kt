@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dagdevelop.wemeet.UI.EventDetailsActivity
+import com.dagdevelop.wemeet.UI.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import com.dagdevelop.wemeet.dataAccess.middleware.ApiConfig
 import com.dagdevelop.wemeet.dataAccess.webService.UserApi
@@ -38,6 +39,10 @@ class MainActivity : AppCompatActivity() {
         // pour passer à l'activité EventDetails en attendant
         eventDetailsActivityButton.setOnClickListener {
             startActivity(Intent(this, EventDetailsActivity::class.java))
+        }
+
+        loginActivityButton.setOnClickListener{
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 }
