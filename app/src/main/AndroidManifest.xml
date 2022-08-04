@@ -14,12 +14,14 @@
         android:theme="@style/Theme.Wemeet"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
-        tools:targetApi="M">
+        tools:targetApi="M"
+        android:screenOrientation="nosensor"
+        android:configChanges="keyboardHidden|orientation" >
         <activity
-            android:name=".UI.EventDetailsActivity"
+            android:name=".view.EventDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".UI.LoginActivity"
+            android:name=".view.LoginActivity"
             android:exported="false" />
 
         <uses-library
@@ -27,7 +29,7 @@
             android:required="false" />
 
         <activity
-            android:name=".dataAccess.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

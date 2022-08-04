@@ -1,13 +1,13 @@
-package com.dagdevelop.wemeet.dataAccess
+package com.dagdevelop.wemeet
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.dagdevelop.wemeet.UI.EventDetailsActivity
-import com.dagdevelop.wemeet.UI.LoginActivity
+import com.dagdevelop.wemeet.view.EventDetailsActivity
+import com.dagdevelop.wemeet.view.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import com.dagdevelop.wemeet.dataAccess.middleware.ApiConfig
-import com.dagdevelop.wemeet.dataAccess.webService.UserApi
+import com.dagdevelop.wemeet.middleware.ApiConfig
+import com.dagdevelop.wemeet.webService.UserApi
 import com.dagdevelop.wemeet.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
 import java.lang.Exception

@@ -1,9 +1,7 @@
-package com.dagdevelop.wemeet.UI
+package com.dagdevelop.wemeet.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.dagdevelop.wemeet.R
-import com.dagdevelop.wemeet.UI.EventDetailsMenuFragment
 import com.dagdevelop.wemeet.databinding.ActivityEventDetailsBinding
 
 class EventDetailsActivity : AppCompatActivity() {

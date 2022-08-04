@@ -1,7 +1,7 @@
-package com.dagdevelop.wemeet.dataAccess.webService
+package com.dagdevelop.wemeet.webService
 
-import com.dagdevelop.wemeet.dataAccess.middleware.ApiConfig
-import com.dagdevelop.wemeet.dataAccess.dto.EventRole
+import com.dagdevelop.wemeet.middleware.ApiConfig
+import com.dagdevelop.wemeet.dataAccess.dataTransferObject.EventRole
 import retrofit2.Response
 import retrofit2.http.DELETE
 import retrofit2.http.GET

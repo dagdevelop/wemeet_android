@@ -1,4 +1,4 @@
-package com.dagdevelop.wemeet.dataAccess.dto
+package com.dagdevelop.wemeet.dataAccess.dataTransferObject
 
 data class Survey(
     val id: Int,

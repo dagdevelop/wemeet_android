@@ -1,25 +1,17 @@
-package com.dagdevelop.wemeet.UI
+package com.dagdevelop.wemeet.view
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.dagdevelop.wemeet.R
-import com.dagdevelop.wemeet.dataAccess.middleware.ApiConfig
-import com.dagdevelop.wemeet.dataAccess.middleware.LoginRequest
-import com.dagdevelop.wemeet.dataAccess.middleware.LoginResponse
-import com.dagdevelop.wemeet.dataAccess.middleware.SessionManager
-import com.dagdevelop.wemeet.dataAccess.webService.UserApi
+import com.dagdevelop.wemeet.middleware.ApiConfig
+import com.dagdevelop.wemeet.middleware.LoginRequest
+import com.dagdevelop.wemeet.middleware.LoginResponse
+import com.dagdevelop.wemeet.middleware.SessionManager
+import com.dagdevelop.wemeet.webService.UserApi
 import com.dagdevelop.wemeet.databinding.ActivityLoginBinding
-import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.runBlocking
-import retrofit2.Call
-import retrofit2.Response
 import retrofit2.Retrofit
 import java.lang.Exception
-import javax.security.auth.callback.Callback
-import kotlin.math.log
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var sessionManager: SessionManager

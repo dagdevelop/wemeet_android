@@ -5,11 +5,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dagdevelop.wemeet.dataAccess.dto.FOO_users
-import com.dagdevelop.wemeet.dataAccess.dto.User
-import com.dagdevelop.wemeet.dataAccess.webService.UserApi
+import com.dagdevelop.wemeet.dataAccess.dataTransferObject.FOO_users
+import com.dagdevelop.wemeet.dataAccess.dataTransferObject.User
+import com.dagdevelop.wemeet.webService.UserApi
 import kotlinx.coroutines.launch
-import java.lang.Exception
 
 const val TAG_VM = "UserViewModel"
 

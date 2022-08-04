@@ -1,8 +1,8 @@
-package com.dagdevelop.wemeet.dataAccess.webService
+package com.dagdevelop.wemeet.webService
 
-import com.dagdevelop.wemeet.dataAccess.middleware.ApiConfig
-import com.dagdevelop.wemeet.dataAccess.dto.Event
-import com.dagdevelop.wemeet.dataAccess.dto.User
+import com.dagdevelop.wemeet.middleware.ApiConfig
+import com.dagdevelop.wemeet.dataAccess.dataTransferObject.Event
+import com.dagdevelop.wemeet.dataAccess.dataTransferObject.User
 import retrofit2.Response
 import retrofit2.http.*
 

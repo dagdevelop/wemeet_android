@@ -1,6 +1,6 @@
-package com.dagdevelop.wemeet.dataAccess.middleware
+package com.dagdevelop.wemeet.middleware
 
-import com.dagdevelop.wemeet.dataAccess.dto.User
+import com.dagdevelop.wemeet.dataAccess.dataTransferObject.User
 import com.squareup.moshi.Json
 
 data class LoginResponse (

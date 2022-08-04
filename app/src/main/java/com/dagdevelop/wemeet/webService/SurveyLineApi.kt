@@ -1,6 +1,6 @@
-package com.dagdevelop.wemeet.dataAccess.webService
+package com.dagdevelop.wemeet.webService
 
-import com.dagdevelop.wemeet.dataAccess.middleware.ApiConfig
+import com.dagdevelop.wemeet.middleware.ApiConfig
 import retrofit2.http.DELETE
 import retrofit2.http.PATCH
 import retrofit2.http.POST

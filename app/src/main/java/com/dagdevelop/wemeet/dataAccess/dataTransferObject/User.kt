@@ -1,4 +1,4 @@
-package com.dagdevelop.wemeet.dataAccess.dto
+package com.dagdevelop.wemeet.dataAccess.dataTransferObject
 
 import com.squareup.moshi.Json
 

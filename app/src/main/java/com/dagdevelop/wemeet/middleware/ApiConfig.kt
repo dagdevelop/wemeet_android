@@ -1,4 +1,4 @@
-package com.dagdevelop.wemeet.dataAccess.middleware
+package com.dagdevelop.wemeet.middleware
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
