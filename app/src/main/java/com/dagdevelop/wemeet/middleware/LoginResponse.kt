@@ -4,8 +4,8 @@ import com.dagdevelop.wemeet.dataAccess.dataTransferObject.User
 import com.squareup.moshi.Json
 
 data class LoginResponse (
-    @Json(name = "status_code")
-    var statusCode: Int,
+    @Json(name = "status") // because of API : status === "admin" || "user"
+    var status: Boolean,
 
     @Json(name = "auth_token")
     var authToken: String,
