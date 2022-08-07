@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         try {
             runBlocking {
                 val user = UserApi.service.getUser(1).body()
-                binding.singleUserView.text = "${ user?.firstName } ${user?.lastName}"
+                binding.singleUserView.text = "${ user?.firstName } ${user?.lastName} ${user?.address}"
             }
         } catch (e: Exception) {
             binding.singleUserView.text = e.message

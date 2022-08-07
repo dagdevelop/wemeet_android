@@ -1,7 +1,7 @@
 package com.dagdevelop.wemeet.webService
 
 import com.dagdevelop.wemeet.middleware.ApiConfig
-import com.dagdevelop.wemeet.dataAccess.dataTransferObject.Calendar
+import com.dagdevelop.wemeet.dataAccess.dto.Calendar
 import retrofit2.Response
 import retrofit2.http.DELETE
 import retrofit2.http.GET

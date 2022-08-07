@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dagdevelop.wemeet.dataAccess.dataTransferObject.Event
+import com.dagdevelop.wemeet.dataAccess.dto.Event
 import com.dagdevelop.wemeet.webService.EventApi
 import kotlinx.coroutines.launch
 import java.lang.Exception

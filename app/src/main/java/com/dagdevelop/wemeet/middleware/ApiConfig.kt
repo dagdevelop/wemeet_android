@@ -1,5 +1,6 @@
 package com.dagdevelop.wemeet.middleware
 
+import android.util.Log
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.Interceptor
@@ -38,7 +39,7 @@ object ApiConfig {
     object RequestInteceptor : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
             val request = chain.request()
-            println("Outgoing request to ${request.url}")
+            Log.d(">>> API-CONFIG <<<", "Outgoing request to ${request.url}")
             return chain.proceed(request)
         }
     }

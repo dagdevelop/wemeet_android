@@ -56,4 +56,7 @@ dependencies {
     implementation 'com.squareup.moshi:moshi-kotlin:1.13.0'
     // okhttp3 = handle requests
     implementation 'com.squareup.okhttp3:okhttp:4.2.1'
+
+    // custom way to handle JWT
+    implementation 'com.auth0.android:jwtdecode:2.0.1'
 }

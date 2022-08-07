@@ -1,9 +1,8 @@
 package com.dagdevelop.wemeet.webService
 
 import com.dagdevelop.wemeet.middleware.ApiConfig
-import com.dagdevelop.wemeet.dataAccess.dataTransferObject.User
+import com.dagdevelop.wemeet.dataAccess.dto.User
 import com.dagdevelop.wemeet.middleware.LoginRequest
-import com.dagdevelop.wemeet.middleware.LoginResponse
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -13,16 +12,16 @@ interface UserApiService {
     suspend fun getUser(@Path("id") id : Int) : Response<User> // Call = valeur retournée par la requête Retrofit
 
     @POST("${USER}/login")
-    suspend fun login(@Body request: LoginRequest) : Response<LoginResponse>
+    suspend fun login(@Body request: LoginRequest) : Response<String>
 
     @POST(USER)
-    suspend fun createUser() : okhttp3.Response
+    suspend fun createUser(@Body request: User) : okhttp3.Response
 
     @PATCH(USER)
-    suspend fun updateUser() : okhttp3.Response
+    suspend fun updateUser(@Body request: User) : okhttp3.Response
 
     @DELETE(USER)
-    suspend fun deleteUser() : okhttp3.Response
+    suspend fun deleteUser(@Body request: Int) : okhttp3.Response
 }
 
 object UserApi {

@@ -16,7 +16,7 @@ class EventDetailsMainFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding = FragmentEventDetailsMainBinding.inflate(inflater)
 
         // allows data binding to observe LiveData with the lifecycle of this fragment
