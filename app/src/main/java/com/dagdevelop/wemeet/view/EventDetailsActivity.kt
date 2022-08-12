@@ -11,7 +11,7 @@ class EventDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // val menu = EventDetailsMenuFragment.newInstance("MON EVENT", false)
+        val menu = EventDetailsMenuFragment.newInstance("MON EVENT", "Description")
 
         binding = ActivityEventDetailsBinding.inflate(layoutInflater)
 

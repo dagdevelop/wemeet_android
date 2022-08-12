@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.auth0.android.jwt.JWT
 import com.dagdevelop.wemeet.middleware.ApiConfig
 import com.dagdevelop.wemeet.middleware.LoginRequest
-import com.dagdevelop.wemeet.Utils.SessionManager
+import com.dagdevelop.wemeet.middleware.SessionManager
 import com.dagdevelop.wemeet.webService.UserApi
 import com.dagdevelop.wemeet.databinding.ActivityLoginBinding
 import kotlinx.coroutines.runBlocking

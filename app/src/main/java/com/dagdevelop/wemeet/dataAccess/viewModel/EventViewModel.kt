@@ -4,7 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.dagdevelop.wemeet.dataAccess.dto.Calendar
 import com.dagdevelop.wemeet.dataAccess.dto.Event
+import com.dagdevelop.wemeet.dataAccess.dto.EventRole
+import com.dagdevelop.wemeet.dataAccess.dto.Survey
 import com.dagdevelop.wemeet.webService.EventApi
 import kotlinx.coroutines.launch
 import java.lang.Exception
@@ -23,6 +26,15 @@ class EventViewModel : ViewModel() {
 
     private val _event = MutableLiveData<Event>()
     val event: LiveData<Event> = _event
+
+    private val _surveys = MutableLiveData<List<Survey>>()
+    val surveys: LiveData<List<Survey>> = _surveys
+
+    private val _calendars = MutableLiveData<List<Calendar>>()
+    val calendars: LiveData<List<Calendar>> = _calendars
+
+    private val _eventRoles = MutableLiveData<List<EventRole>>()
+    val eventRoles: LiveData<List<EventRole>> = _eventRoles
 
     init {
         getAllEvents()
@@ -52,5 +64,14 @@ class EventViewModel : ViewModel() {
         }
     }
 
+    /*
+    private fun deleteEvent(id: Int) {
+        try {
+            viewModelScope.launch {
+                val res = Event
+            }
+        }
+    }
 
+     */
 }

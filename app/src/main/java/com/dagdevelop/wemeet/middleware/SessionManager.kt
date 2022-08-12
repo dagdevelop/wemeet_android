@@ -1,4 +1,4 @@
-package com.dagdevelop.wemeet.Utils
+package com.dagdevelop.wemeet.middleware
 
 import android.content.Context
 import android.content.SharedPreferences

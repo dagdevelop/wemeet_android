@@ -16,15 +16,19 @@
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/drawable/ic_check.xml" value="0.2715" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/activity_create_new_event.xml" value="0.264" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/activity_event_details.xml" value="0.264" />
+        <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/activity_event_list.xml" value="0.42269187986651835" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/activity_login.xml" value="0.4" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/activity_new_event.xml" value="0.36666666666666664" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/bottom_menu_layout.xml" value="0.2076923076923077" />
+        <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/fragment_blank.xml" value="0.36666666666666664" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/fragment_bottom_menu.xml" value="0.20516304347826086" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/fragment_bottom_menu_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/fragment_event_details_main.xml" value="0.2" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/fragment_event_details_menu.xml" value="0.2" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/fragment_event_details_top.xml" value="0.264" />
+        <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/fragment_event_list.xml" value="0.365625" />
+        <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/layout/item_view_event.xml" value="0.365625" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/menu/bottom_menu.xml" value="0.2" />
         <entry key="..\:/IESN/BAC3/LabosAndroid/wemeet_android/app/src/main/res/menu/bottom_menu_v2.xml" value="0.2" />
         <entry key="..\:/Users/armel/AndroidStudioProjects/wemeet/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />

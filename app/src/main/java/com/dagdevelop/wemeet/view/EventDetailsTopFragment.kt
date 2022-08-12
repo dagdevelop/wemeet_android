@@ -17,7 +17,12 @@ private const val IS_PRIVATE = "isPrivate"
  * Use the [EventDetailsMenuFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class EventDetailsMenuFragment : Fragment() {
+class EventDetailsMenuFragment(title: String, description: String) : Fragment() {
+
+    companion object {
+        fun newInstance(title: String, description: String) = EventDetailsMenuFragment(title, description)
+    }
+
     private val viewModel: EventViewModel by viewModels()
 
     override fun onCreateView(
