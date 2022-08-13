@@ -1,13 +1,11 @@
 package com.dagdevelop.wemeet.dataAccess.viewModel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dagdevelop.wemeet.dataAccess.dto.Calendar
-import com.dagdevelop.wemeet.dataAccess.dto.Event
-import com.dagdevelop.wemeet.dataAccess.dto.EventRole
-import com.dagdevelop.wemeet.dataAccess.dto.Survey
+import com.dagdevelop.wemeet.dataAccess.dto.*
 import com.dagdevelop.wemeet.webService.EventApi
 import kotlinx.coroutines.launch
 import java.lang.Exception
@@ -24,8 +22,8 @@ class EventViewModel : ViewModel() {
     private val _allEvents = MutableLiveData<List<Event>>()
     val allEvents: LiveData<List<Event>> = _allEvents
 
-    private val _event = MutableLiveData<Event>()
-    val event: LiveData<Event> = _event
+    private val _event = MutableLiveData<EventDetailsResponse>()
+    val event: LiveData<EventDetailsResponse> = _event
 
     private val _surveys = MutableLiveData<List<Survey>>()
     val surveys: LiveData<List<Survey>> = _surveys
@@ -55,9 +53,11 @@ class EventViewModel : ViewModel() {
     private fun getEvent(id: Int) {
         try {
             viewModelScope.launch {
-                val res = EventApi.service.getEvent(id)
-                _event.value = res.body()
-                _status.value = res.code().toString()
+                //val res = EventApi.service.getEvent(id)
+                //_event.value = res.body()
+                //_status.value = res.code().toString()
+//
+                //Log.d(TAG_EVM, "${_event.value.toString()}")
             }
         } catch (e : Exception) {
             _status.value = "Failure : ${e.message}"

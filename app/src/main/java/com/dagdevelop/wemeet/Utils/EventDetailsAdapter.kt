@@ -4,31 +4,31 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import com.dagdevelop.wemeet.dataAccess.dto.Event
-import androidx.lifecycle.LiveData
 import com.dagdevelop.wemeet.R
+import com.dagdevelop.wemeet.dataAccess.dto.Calendar
+import com.dagdevelop.wemeet.dataAccess.dto.User
 
-class EventAdapter(
+class EventDetailsAdapter(
     private val context: Context,
     private val eventList: List<Event>,
+    private val calendar: Calendar,
     private val lifecycleOwner: LifecycleOwner
-) : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
+) : RecyclerView.Adapter<EventDetailsAdapter.EventDetailsViewHolder>() {
 
-    class EventViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+    class EventDetailsViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val date: TextView = view.findViewById(R.id.item_view_event_date_text)
         val title: TextView = view.findViewById(R.id.item_view_event_title)
         val description: TextView = view.findViewById(R.id.item_view_event_description)
-
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventDetailsViewHolder {
         TODO("Not yet implemented")
     }
 
-    override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: EventDetailsViewHolder, position: Int) {
         TODO("Trouver comment placer les dates des evenements")
         val item = eventList[position]
         //holder.date.text =

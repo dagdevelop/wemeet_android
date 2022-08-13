@@ -11,4 +11,8 @@ data class User(
     val address: String?,
     @Json(name = "postal_code") val postalCode: Int?,
     @Json(name = "is_admin") val isAdmin: Boolean
-)
+) {
+    override fun toString(): String {
+        return "${id} $firstName $lastName"
+    }
+}

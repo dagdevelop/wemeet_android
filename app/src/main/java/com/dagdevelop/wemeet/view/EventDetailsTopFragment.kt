@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import com.dagdevelop.wemeet.dataAccess.viewModel.EventDetailsViewModel
 import com.dagdevelop.wemeet.dataAccess.viewModel.EventViewModel
 import com.dagdevelop.wemeet.databinding.FragmentEventDetailsTopBinding
 
@@ -23,7 +24,7 @@ class EventDetailsMenuFragment(title: String, description: String) : Fragment() 
         fun newInstance(title: String, description: String) = EventDetailsMenuFragment(title, description)
     }
 
-    private val viewModel: EventViewModel by viewModels()
+    private val viewModel: EventDetailsViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

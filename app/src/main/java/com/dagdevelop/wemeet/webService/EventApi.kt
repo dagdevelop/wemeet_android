@@ -1,8 +1,12 @@
 package com.dagdevelop.wemeet.webService
 
+import android.widget.Toast
+import com.dagdevelop.wemeet.dataAccess.dto.Calendar
 import com.dagdevelop.wemeet.middleware.ApiConfig
 import com.dagdevelop.wemeet.dataAccess.dto.Event
+import com.dagdevelop.wemeet.dataAccess.dto.EventDetailsResponse
 import com.dagdevelop.wemeet.dataAccess.dto.User
+import kotlinx.coroutines.runBlocking
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -12,21 +16,48 @@ interface EventApiService {
     suspend fun getAllEvents() : Response<List<Event>>
 
     @GET("${EVENT}/{id}")
-    suspend fun getEvent(id: Int) : Response<Event>
+    suspend fun getEvent(@Path("id")id: Int) : Response<EventDetailsResponse>
 
-    @GET("${EVENT}{id}/participants")
-    suspend fun getParticipants(id: Int) : Response<List<User>>
+    @GET("${EVENT}/{id}/participants")
+    suspend fun getParticipants(@Path("id")id: Int) : Response<List<User>>
 
     @POST(EVENT)
-    suspend fun createEvent() : okhttp3.Response
+    suspend fun createEvent(@Body event: Event) : okhttp3.Response
 
     @PATCH(EVENT)
-    suspend fun updateEvent() : okhttp3.Response
+    suspend fun updateEvent(@Body event: Event) : okhttp3.Response
 
     @DELETE(EVENT)
-    suspend fun deleteEvent() : okhttp3.Response
+    suspend fun deleteEvent(@Body id: Int) : okhttp3.Response
 }
 
 object EventApi {
     val service: EventApiService by lazy { ApiConfig.getClient().create(EventApiService::class.java) }
+
+    fun getAllEvents() : List<Event> {
+        var res: List<Event>
+        try {
+            runBlocking {
+                res = EventApi.service.getAllEvents().body()!!
+            }
+        } catch (e: Exception) {
+            throw java.lang.Exception(e.message)
+        }
+        return res
+    }
+
+    fun getEvent(id: Int) : EventDetailsResponse {
+        var res: EventDetailsResponse
+        var calendars: List<Calendar>
+        try {
+            runBlocking {
+                res = EventApi.service.getEvent(id).body()!!
+                calendars = CalendarApi.service.getAllCalendars(id).body()!!
+                res.calendars = calendars
+            }
+        }catch (e: Exception) {
+            throw java.lang.Exception(e.message)
+        }
+        return res
+    }
 }
