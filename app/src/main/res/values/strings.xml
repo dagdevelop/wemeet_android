@@ -23,7 +23,7 @@
     <string name="search_bar_key">Ville</string>
 
     <!-- event recycler view -->
-    <string name="recycler_view_event_date_text" translatable="false">%s</string>
+    <string name="recycler_view_event_date_text" translatable="false">Participants</string>
     <string name="recycler_view_event_title_text" translatable="false">%s [%s]</string>
     <string name="recycler_view_event_description_text" translatable="false">[%s] %s</string>
 

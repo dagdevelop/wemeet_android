@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dagdevelop.wemeet.dataAccess.dto.*
+import com.dagdevelop.wemeet.webService.CalendarApi
 import com.dagdevelop.wemeet.webService.EventApi
 import kotlinx.coroutines.launch
 import java.lang.Exception
@@ -35,7 +36,7 @@ class EventViewModel : ViewModel() {
     val eventRoles: LiveData<List<EventRole>> = _eventRoles
 
     init {
-        getAllEvents()
+        getEvent(1)
     }
 
     private fun getAllEvents() {
@@ -53,11 +54,12 @@ class EventViewModel : ViewModel() {
     private fun getEvent(id: Int) {
         try {
             viewModelScope.launch {
-                //val res = EventApi.service.getEvent(id)
-                //_event.value = res.body()
-                //_status.value = res.code().toString()
-//
-                //Log.d(TAG_EVM, "${_event.value.toString()}")
+                val res = EventApi.service.getEvent(id)
+                val calendars = CalendarApi.service.getAllCalendars(id).body()
+
+                _event.value = res.body()
+                _event.value?.calendars = calendars
+                _status.value = res.code().toString()
             }
         } catch (e : Exception) {
             _status.value = "Failure : ${e.message}"

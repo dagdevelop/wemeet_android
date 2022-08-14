@@ -38,8 +38,7 @@ object ApiConfig {
     // va permettre des opérations sur les requêtes
     object RequestInteceptor : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
-            val request = chain.request()
-            Log.d(">>> API-CONFIG <<<", "Outgoing request to ${request.url}")
+            val request = chain.request() 
             return chain.proceed(request)
         }
     }

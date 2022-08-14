@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.viewModels
+import com.dagdevelop.wemeet.dataAccess.viewModel.EventViewModel
 import com.dagdevelop.wemeet.view.EventDetailsActivity
 import com.dagdevelop.wemeet.view.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,38 +19,27 @@ import kotlinx.coroutines.*
 import kotlin.Exception
 
 class MainActivity : AppCompatActivity() {
-    private val retrofit = ApiConfig
-
-    // nécessaire pour pouvoir cibler manuellement les éléments de activity_main.xml
     private lateinit var binding: ActivityMainBinding
+
+    private val eventViewModel: EventViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Pour pouvoir cibler "manuellement" les éléments de activity_main.xml
         binding = ActivityMainBinding.inflate(layoutInflater)
+
+        binding.vm = eventViewModel
+
+        binding.lifecycleOwner = this
+
         setContentView(binding.root)
+    }
 
-        // Requête API = async (mot-clé Kotlin = suspend)
-        // Doit être dans un bloc de coroutine (= await)
 
-        val event = EventApi.getEvent(1)
-        binding.singleUserView.text = event.toString()
-        /*
-        try {
-            runBlocking {
-                //val user = UserApi.service.getUser(1).body()
-                //val user = EventApi.service.getParticipants(1).body()!!
-                val user = EventApi.service.getParticipants(1).body()!!
-                binding.singleUserView.text = user.toString()
-                // val res = EventApi.service.getEvent(1).body()!!
-                // binding.singleUserView.text =  "${res.id} ${res.cityName} ${res.description}"
-            }
-        } catch (e: Exception) {
-            binding.singleUserView.text = e.message
-        }
+    // Requête API = async (mot-clé Kotlin = suspend)
+    // Doit être dans un bloc de coroutine (= await)
 
-         */
+    // val event = EventApi.getEvent(1)
+    // binding.singleUserView.text = event.toString()
 /*
         // pour passer à l'activité EventDetails en attendant
         eventDetailsActivityButton.setOnClickListener {
@@ -60,5 +51,4 @@ class MainActivity : AppCompatActivity() {
         }
 
          */
-    }
 }

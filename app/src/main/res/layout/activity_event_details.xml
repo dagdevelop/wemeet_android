@@ -1,49 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".view.EventDetailsActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/event_detail_menu_header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_event_details_top" />
+    <data>
+        <variable
+            name="viewModel"
+            type="com.dagdevelop.wemeet.dataAccess.viewModel.EventDetailsViewModel" />
+    </data>
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/event_detail_border_shape_background"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/default_color"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toBottomOf="@+id/event_detail_menu_header"
-        android:minHeight="300dp" />
+        android:layout_height="match_parent">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/event_detail_border_shape_foreground"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/event_detail_border_shape_background"
-        android:minHeight="295dp"
-        android:background="@color/white"
-        android:layout_margin="3dp"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/event_detail_menu_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout="@layout/fragment_event_details_top" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/event_detail_menu_header"
-        android:layout_marginTop="@dimen/default_margin"
-        tools:layout="@layout/fragment_event_details_main"
-        android:layout_marginEnd="20dp"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/event_detail_border_shape_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/default_color"
+            android:minHeight="300dp"
+            app:layout_constraintTop_toBottomOf="@+id/event_detail_menu_header" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout="@layout/fragment_bottom_menu_layout" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/event_detail_border_shape_foreground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@color/white"
+            android:minHeight="295dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/event_detail_border_shape_background" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/event_detail_menu_header"
+            tools:layout="@layout/fragment_event_details_main" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout="@layout/fragment_bottom_menu_layout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

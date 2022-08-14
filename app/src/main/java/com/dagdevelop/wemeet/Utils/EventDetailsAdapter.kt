@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dagdevelop.wemeet.dataAccess.dto.Event
 import com.dagdevelop.wemeet.R
 import com.dagdevelop.wemeet.dataAccess.dto.Calendar
-import com.dagdevelop.wemeet.dataAccess.dto.User
 
 class EventDetailsAdapter(
     private val context: Context,
@@ -19,7 +18,7 @@ class EventDetailsAdapter(
 ) : RecyclerView.Adapter<EventDetailsAdapter.EventDetailsViewHolder>() {
 
     class EventDetailsViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        val date: TextView = view.findViewById(R.id.item_view_event_date_text)
+        val date: TextView = view.findViewById(R.id.item_view_event_nbParticipants_text)
         val title: TextView = view.findViewById(R.id.item_view_event_title)
         val description: TextView = view.findViewById(R.id.item_view_event_description)
     }

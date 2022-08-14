@@ -38,7 +38,7 @@ object EventApi {
         var res: List<Event>
         try {
             runBlocking {
-                res = EventApi.service.getAllEvents().body()!!
+                res = service.getAllEvents().body()!!
             }
         } catch (e: Exception) {
             throw java.lang.Exception(e.message)
@@ -51,7 +51,7 @@ object EventApi {
         var calendars: List<Calendar>
         try {
             runBlocking {
-                res = EventApi.service.getEvent(id).body()!!
+                res = service.getEvent(id).body()!!
                 calendars = CalendarApi.service.getAllCalendars(id).body()!!
                 res.calendars = calendars
             }

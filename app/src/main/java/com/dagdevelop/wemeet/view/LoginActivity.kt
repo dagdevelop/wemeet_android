@@ -1,5 +1,6 @@
 package com.dagdevelop.wemeet.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,18 @@ class LoginActivity : AppCompatActivity() {
         apiClient = ApiConfig.getClient()
         sessionManager = SessionManager(this)
 
+        binding.loginSubmitButton.setOnClickListener {
+            val email = binding.loginEmailInputEditText.text.toString()
+            val password = binding.loginPasswordInputEditText.text.toString()
+            val encodedToken = UserApi.login(email, password)!!
+            jwt = JWT(encodedToken)
+            sessionManager.saveAuthToken(jwt)
+
+            if(sessionManager.fetchAuthTokenAsString() != null)
+                startActivity(Intent(this, EventListActivity::class.java))
+        }
+
+        /*
         try {
             runBlocking {
                 val encodedToken =
@@ -34,10 +47,13 @@ class LoginActivity : AppCompatActivity() {
                         .body()!!
                 val jwt: JWT = JWT(encodedToken)
                 val status: String = jwt.getClaim("status").asString()!!
+                sessionManager.saveAuthToken(jwt)
             }
         } catch (e: Exception) {
             val errorPopup = Toast.makeText(this, "${e.message}", Toast.LENGTH_LONG)
             errorPopup.show()
         }
+
+         */
     }
 }

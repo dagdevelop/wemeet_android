@@ -19,9 +19,12 @@
         android:configChanges="keyboardHidden|orientation" >
         <activity
             android:name=".view.EventDetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".view.LoginActivity"
+            android:exported="false" />
+        <activity android:name=".view.EventListActivity"
             android:exported="false" />
 
         <uses-library

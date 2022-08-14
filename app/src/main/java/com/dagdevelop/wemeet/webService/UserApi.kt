@@ -1,8 +1,12 @@
 package com.dagdevelop.wemeet.webService
 
+import android.util.Log
+import android.widget.Toast
 import com.dagdevelop.wemeet.middleware.ApiConfig
 import com.dagdevelop.wemeet.dataAccess.dto.User
 import com.dagdevelop.wemeet.middleware.LoginRequest
+import com.dagdevelop.wemeet.view.LoginActivity
+import kotlinx.coroutines.runBlocking
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -33,5 +37,18 @@ object UserApi {
         // val successful = usersResponse.isSuccessful
         // val httpStatusCode = usersResponse.code()
         // val httpStatusMessage = usersResponse.message()
+    }
+
+    fun login(email: String, password: String) : String? {
+        val request = LoginRequest(email, password)
+        var response: String? = null
+        try {
+            runBlocking {
+                response = UserApi.service.login(request).body()
+            }
+        } catch (e: Exception) {
+            Log.e("UserApi", e.message!!)
+        }
+        return response
     }
 }

@@ -36,7 +36,7 @@ class EventDetailsMenuFragment(title: String, description: String) : Fragment() 
         binding.lifecycleOwner = this
 
         // give the binding access to the EventViewModel
-        binding.eventViewModel = viewModel
+        binding.eventDetailsViewModel = viewModel
 
         return binding.root
     }
